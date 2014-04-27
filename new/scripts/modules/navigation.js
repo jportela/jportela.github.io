@@ -33,12 +33,12 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 				
 				_isAnimating = true;
 
+				scroll.resetScrollTimer();
+
 				navigationLinks = $(NAVIGATION_SELECTOR + ' a');
 
 				navigationLinks.removeClass('is-selected');
 				
-				scroll.resetScrollTimer();
-
 				navigationLinks.filter('[href=#' + id + ']').addClass('is-selected');
 
 				container.transition({
@@ -65,9 +65,10 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 		onNavigationEnd: function (container, node) {
 			var id = node.attr('id');
 
+			container.attr('data-selected', id);
+
 			_isAnimating = false;
 
-			container.attr('data-selected', id);
 
 			if (node.length && node.hasClass('ui-navigation-hook')) {
 				var data = node.data()
@@ -82,7 +83,9 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 				
 				event.preventDefault();
 
-				self.navigateBySelector(location);
+				if (!_isAnimating) {
+					self.navigateBySelector(location);
+				}
 			});
 
 			$(window).resize(function () {
