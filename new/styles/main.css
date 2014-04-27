@@ -315,3 +315,31 @@ a:hover, a:active {
 		clear: both;
 	}
 }
+
+@media all and (max-height: 490px) {
+	.menu {
+		line-height: 40px;
+	}
+
+	.ui-navigation-container h2 {
+		padding-top: 50px;
+	}
+
+	section p, section li {
+		font-size: 0.9em;
+		line-height: 1.1em;
+		margin: 5px 0;
+	}
+
+	.ui-carousel-prev, .ui-carousel-next {
+		text-indent: 0;
+		background: none;
+		width: auto;
+		height: auto;
+		color: #0060C9;
+	}
+
+	.work-project-cover > img {
+		height: 100px;
+	}
+}
