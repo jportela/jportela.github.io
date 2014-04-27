@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>João Portela - Software Developer</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Personal website of João Portela, a software developer, specialized in bringing your vision to reality." />
+
+        <!--[if lt IE 9]>
+            <script src="scripts/html5shivmin.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/owl.carousel.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <h1>João Portela - Software Developer</h1>
+        </header>
+        <nav class="menu">
+            <ul class="menu-list ui-navigation">
+                <li><a id="menu-home" href="#home" class="menu-link" rel="nofollow">João Portela</a></li>
+
+                <li><a id="menu-contact" href="#contact" class="menu-link" rel="nofollow">Contact me</a></li>
+                <li><a id="menu-projects" href="#projects" class="menu-link" rel="nofollow">Projects</a></li>
+                <li><a id="menu-who" href="#who" class="menu-link" rel="nofollow">Who?</a></li>
+            </ul>
+        </nav>
+        <div class="main-background">
+            <div class="ui-navigation-container" data-selected="home">
+                <section id="home" class="ui-navigation-hook" data-hook="remove-class" data-target="#menu-home" data-name="is-visible">
+                    <p class="presentation-name">
+                        Hi, I'm <strong>João Portela</strong>.
+                    </p>
+                    <p class="presentation-description">
+                        I'm a Software Developer, specialized in turning your vision into reality.
+                    </p>    
+                </section>
+            
+                <section id="who" class="ui-navigation-hook" data-hook="add-class" data-target="#menu-home" data-name="is-visible">
+                    <h2>Who?</h2>
+                    <p>I'm João Portela, a Software Developer with a passion for creating engaging experiences. My unique background provides a valuable asset in designing, architecting and implementing high-performance, user-focused products.</p>
+
+                    <p>I'm currently a Front End Developer at Blip, implementing high performance web applications used by millions of users worldwide.</p>
+
+                    <p>I have hands-on experience with the following:</p>
+
+                    <ul class="who-experience">
+                        <li><strong>Languages</strong>: Javascript, HTML, C/C++, Java</li>
+                        <li><strong>Frameworks</strong>: YUI, Freemarker, Less, jQuery, Ruby on Rails</li>
+                        <li><strong>Tools</strong>: Git, SVN, Intellij IDEA, Balsamiq Mockups, Chrome, Firefox, Internet Explorer</li>
+                        <li><strong>Methodologies</strong>: Scrum, Kanban, TSP/PSP</li>
+                    </ul>
+
+                </section>
+
+                <section id="projects" class="ui-navigation-hook" data-hook="add-class" data-target="#menu-home" data-name="is-visible">
+                    <h2>Projects</h2>
+                    <p>Aside from my work projects, I'm engaged in other personal projects, because I love to learn new technologies, and because I believe in constant self-improvement. Here are a few of the projects I'm most proud of:</p>
+
+                    <div class="ui-carousel-prev" data-target=".work-projects">
+                        Previous
+                    </div>
+                    <div class="ui-carousel-next" data-target=".work-projects">
+                        Next
+                    </div>
+
+                    <div class="work-projects-container">
+                        <div class="work-projects ui-carousel owl-carousel">
+                            <div class="work-project">
+                                <h3 class="work-project-title">Is My Javascript On?</h3>
+                                <a target="blank_" href="img/ismyjavascripton.png" class="work-project-cover"><img src="img/ismyjavascripton.png" alt="Is My Javascript On" /></a>
+                                <p class="work-project-description">
+                                    Javascript detector, with a twist. 
+                                    <a target="_blank" href="http://ismyjavascripton.com/">Link</a>&nbsp;|&nbsp;<a target="_blank" href="https://github.com/jportela/ismyjavascripton/">GitHub</a>
+                                </p>
+                            </div>
+                            <div class="work-project">
+                                <h3 class="work-project-title">Master's Dissertation</h3>
+                                <a target="blank_" href="img/dissertation.png" class="work-project-cover" ><img src="img/dissertation.png" alt="Master's Dissertation" /></a>
+                                <p class="work-project-description">
+                                    Multitouch Interaction for Interface Prototyping. <a target="_blank" href="http://paginas.fe.up.pt/~ei07126/thesis/wiki/">Link</a>
+                                </p>
+                            </div>
+                            <div class="work-project">
+                                <h3 class="work-project-title">FEUP Classificados</h3>
+                                <a target="blank_" href="img/classificados.png" class="work-project-cover" ><img src="img/classificados.png" alt="FEUP Classificados" /></a>
+                                <p class="work-project-description">
+                                    Classifieds portal for FEUP community. <a target="_blank" href="https://github.com/jportela/nifeup-classificados">GitHub</a>
+                                </p>
+                            </div>
+                            <div class="work-project">
+                                <h3 class="work-project-title">João Portela</h3>
+                                <a target="blank_" href="img/website.png" class="work-project-cover" ><img src="img/website.png" alt="João Portela Website" /></a>
+                                <p class="work-project-description">
+                                    This website. <a target="_blank" href="https://github.com/jportela/jportela.github.io">GitHub</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="ui-navigation-hook"  data-hook="add-class" data-target="#menu-home" data-name="is-visible">
+                    <h2>Contact me</h2>
+                    <p>Thank you for visiting me! Please stay in touch.</p>
+
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <a class="contact-email" href="mailto:joao.portela@gmail.com">Email</a>
+                        </li>
+                        <li class="contact-item">
+                            <a class="contact-linkedin" href="http://www.linkedin.com/in/joaoportela" target="_blank">LinkedIn</a>
+                        </li>
+                        <li class="contact-item">
+                            <a class="contact-twitter" href="http://twitter.com/joaoppcportela" target="_blank">Twitter</a>
+                        </li>
+                        <li class="contact-item">
+                            <a class="contact-cv" href="http://goo.gl/iN6mD" target="_blank">CV</a>
+                        </li>
+                    </ul>
+
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

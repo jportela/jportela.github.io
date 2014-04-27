@@ -1,0 +1,288 @@
+header {
+	display: none;
+}
+
+body {
+	background: #6C8BA3;
+	margin: 0;
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	padding: 0 1em;
+	line-height: 1.5em;
+}
+
+h2 {
+	margin: 0;
+}
+
+a, a:visited {
+	color: #0060C9;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #084281;
+	text-decoration: underline;
+}
+
+.main-background {
+	background: url("../img/background.png") #6C8BA3 bottom center no-repeat;
+	background-attachment: fixed;
+	position: fixed;
+	overflow: hidden;
+	min-height: 230px;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+
+.no-js .main-background {
+	overflow: scroll;
+}
+
+.ui-navigation-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.menu {
+	line-height: 70px;
+	position: fixed;
+	top: 0;
+	background: #202025;
+	right: 0;
+	left: 0;
+	z-index: 100;
+}
+
+
+#menu-home {
+	float: left;
+	width: auto;
+}
+
+.menu-link {
+	float: right;
+	padding: 0 10px;
+	width: 90px;
+	transition: background 1s ease-out;
+	text-align: center;
+}
+
+.menu-link, .menu-link:visited {
+	color: #B3D1E5;
+	text-decoration: none;
+}
+
+.menu-link:hover, .menu-link:active {
+	color: #6F9CB9;
+	text-decoration: underline;
+}
+
+.ui-navigation-container > section {
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 100%;
+}
+
+#home {
+	text-align: center;
+	width: 500px;
+	margin: 0 auto;
+	top: 0;
+}
+
+.presentation-name {
+	padding-top: 100px;
+	font-size: 2em;
+	margin: 0;
+}
+
+.presentation-description {
+	margin-top: 20px;
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+
+.ui-navigation-container h2 {
+	padding-top: 85px;
+}
+
+#who {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#projects {
+	background: rgba(204, 185, 165, 0.5);
+}
+
+#contact {
+	background: rgba(105, 105, 85, 0.5)
+}
+
+#who {
+	top: 100%;
+}
+
+#projects {
+	top: 200%;
+}
+
+#contact {
+	top: 300%;
+	text-align: center;
+}
+
+#menu-home {
+	color: #C49531;
+	opacity: 0.0;
+	-webkit-transition: opacity 0.5s ease-out;
+}
+
+#menu-home.is-visible {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.5s ease-in;
+}
+
+.work-projects-container {
+	margin: 0 70px;
+}
+
+.work-project {
+	text-align: center;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 10px 0;
+}
+
+.work-project-cover > img {
+	height: 200px;
+}
+
+.work-project-title {
+	font-size: 1em;
+	margin: 0;
+}
+
+.work-project-description {
+	margin: 3px 0;
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+
+.contact-list {
+	margin: 25px auto;
+	width: 290px;
+	background: rgba(255,255,255,0.5);
+	padding: 10px;
+}
+
+.contact:after {
+	content: ""; 
+   	visibility: hidden;
+   	display: block;
+   	height: 0;
+   	clear: both;
+}
+
+.contact-item {
+	display: inline-block;
+	margin-left: 5px;
+	text-align: center;
+}
+
+.contact-item:first-child {
+	margin-left: 0;
+}
+
+.contact-email, .contact-linkedin, .contact-twitter, .contact-cv {
+	width: 64px;
+	padding-top: 68px;
+	text-align: center;
+	background: url("../img/sprite.png") no-repeat;
+	font-size: 0.8em;
+	font-weight: bold;
+	display: block;
+}
+
+.contact-email {
+	background-position: 0 0;
+}
+
+.contact-linkedin {
+	background-position: -68px 0;
+}
+
+.contact-twitter {
+	background-position: -136px 0;
+} 
+
+.contact-cv {
+	background-position: -204px 0;
+}
+
+.ui-carousel-prev, .ui-carousel-next {
+	width: 64px;
+	height: 64px;
+	background: url("../img/sprite.png") no-repeat;
+	overflow: hidden;
+	text-indent: -9999em;
+	cursor: pointer;
+	z-index: 10;
+	margin-top: 100px;
+}
+
+.ui-carousel-prev:hover, .ui-carousel-next:hover {
+	opacity: 0.7;
+}
+
+.ui-carousel-prev {
+	float: left;
+	background-position: -272px 0;
+}
+
+.ui-carousel-next {
+	float: right;
+	background-position: -340px 0;
+}
+
+#menu-who.is-selected {
+	background: #b5c5d1;
+	color: black;
+} 
+
+#menu-projects.is-selected {
+	background: #9ca2a4;
+	color: black;
+}
+
+#menu-contact.is-selected {
+	background: #6a7a7c;
+	color: black;
+}
+
+@media all and (max-width: 500px) {
+	#home {
+		width: auto;
+	}
+
+	#menu-home {
+		display: none;
+	}
+
+	.menu-link {
+		float: right;
+		padding: 0 10px;
+		width: 90px;
+	}
+}
