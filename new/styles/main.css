@@ -328,7 +328,7 @@ a:hover, a:active {
 		width: auto;
 		height: auto;
 		color: #0060C9;
-		padding: 7px;
+		display: none;
 	}
 
 	.work-projects-container {
@@ -372,7 +372,7 @@ a:hover, a:active {
 		width: auto;
 		height: auto;
 		color: #0060C9;
-		padding: 7px;
+		display: none;
 	}
 
 	.work-project-cover > img {
