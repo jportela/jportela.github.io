@@ -19,24 +19,25 @@
         <header>
             <h1>João Portela - Software Developer</h1>
         </header>
-        <nav class="menu">
-            <ul class="menu-list ui-navigation">
-                <li><a id="menu-home" href="#home" class="menu-link" rel="nofollow">João Portela</a></li>
-
-                <li><a id="menu-contact" href="#contact" class="menu-link" rel="nofollow">Contact me</a></li>
-                <li><a id="menu-projects" href="#projects" class="menu-link" rel="nofollow">Projects</a></li>
+        <nav class="menu ui-navigation">
+            <a id="menu-home" href="#home" class="menu-link" rel="nofollow">João Portela</a>
+            <ul class="menu-list">
                 <li><a id="menu-who" href="#who" class="menu-link" rel="nofollow">Who?</a></li>
+                <li><a id="menu-projects" href="#projects" class="menu-link" rel="nofollow">Projects</a></li>
+                <li><a id="menu-contact" href="#contact" class="menu-link" rel="nofollow">Contact me</a></li>
             </ul>
         </nav>
         <div class="main-background">
             <div class="ui-navigation-container" data-selected="home">
                 <section id="home" class="ui-navigation-hook" data-hook="remove-class" data-target="#menu-home" data-name="is-visible">
-                    <p class="presentation-name">
-                        Hi, I'm <strong>João Portela</strong>.
-                    </p>
-                    <p class="presentation-description">
-                        I'm a Software Developer, specialized in turning your vision into reality.
-                    </p>    
+                    <div class="presentation">
+                        <p class="presentation-name">
+                            Hi, I'm <strong>João Portela</strong>.
+                        </p>
+                        <p class="presentation-description">
+                            I'm a Software Developer, specialized in turning your vision into reality.
+                        </p>    
+                    </div>
                 </section>
             
                 <section id="who" class="ui-navigation-hook" data-hook="add-class" data-target="#menu-home" data-name="is-visible">

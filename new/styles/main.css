@@ -65,6 +65,14 @@ a:hover, a:active {
 	z-index: 100;
 }
 
+.menu-list {
+	float: right;
+}
+
+.menu-list > li {
+	float: left;
+}
+
 
 #menu-home {
 	float: left;
@@ -72,7 +80,7 @@ a:hover, a:active {
 }
 
 .menu-link {
-	float: right;
+	float: left;
 	padding: 0 10px;
 	width: 90px;
 	-webkit-transition: background 1s ease-out;
@@ -100,15 +108,15 @@ a:hover, a:active {
 	height: 100%;
 }
 
-#home {
+.presentation {
 	text-align: center;
 	width: 500px;
-	margin: 0 auto;
-	top: 0;
+	margin: 100px auto 0 auto;
+	background: rgba(255, 255, 255, 0.5);
 }
 
 .presentation-name {
-	padding-top: 100px;
+	padding-top: 10px;
 	font-size: 2em;
 	margin: 0;
 	line-height: 1.1em;
@@ -122,6 +130,10 @@ a:hover, a:active {
 
 .ui-navigation-container h2 {
 	padding-top: 85px;
+}
+
+#home {	
+	top: 0;
 }
 
 #who {
@@ -316,13 +328,20 @@ a:hover, a:active {
 	}
 }
 
-@media all and (max-height: 490px) {
-	.menu {
-		line-height: 40px;
+@media all and (max-height: 470px) {
+	.work-project-cover > img {
+		height: 150px;
 	}
+}
+
+@media all and (max-height: 420px) {
 
 	.ui-navigation-container h2 {
-		padding-top: 50px;
+		padding-top: 10px;
+	}
+
+	.main-background {
+		right: 120px;
 	}
 
 	section p, section li {
@@ -340,6 +359,28 @@ a:hover, a:active {
 	}
 
 	.work-project-cover > img {
-		height: 100px;
+		height: 90px;
+	}
+
+	.menu {
+		position: fixed;
+		width: 120px;
+		top: 0;
+		bottom: 0;
+		background: #202025;
+		right: 0;
+		z-index: 100;
+		left: initial;
+		padding: 0px;
+		line-height: 60px;
+	}
+
+	.menu-link {
+		width: 100px;
+	}
+
+	.presentation {
+		margin-top: 30px;
 	}
 }
+

@@ -1,4 +1,4 @@
-define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../modules/navigation/keyboard', '../jquery.transit'], function ($, hook, scroll, keyboard, transit) {
+define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../modules/navigation/keyboard', '../jquery.transit', '../jquery.touchSwipe.min'], function ($, hook, scroll, keyboard, transit, touchswipe) {
 	var NAVIGATION_SELECTOR = '.ui-navigation',
 		NAVIGATION_CONTAINER_SELECTOR = '.ui-navigation-container',
 		NAVIGATION_DURATION = 800,
@@ -90,6 +90,15 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 
 			$(window).resize(function () {
 				self.goToSelectedNode();
+			});
+
+			$(window).swipe({
+				swipeUp: function(event, direction, distance, duration, fingerCount) {
+					self.navigateToPrevious();
+				},
+				swipeDown: function(event, direction, distance, duration, fingerCount) {
+					self.navigateToNext();
+				}
 			});
 		},
 
