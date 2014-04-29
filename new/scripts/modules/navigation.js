@@ -94,10 +94,10 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 
 			$(window).swipe({
 				swipeUp: function(event, direction, distance, duration, fingerCount) {
-					self.navigateToPrevious();
+					self.navigateToNext();
 				},
 				swipeDown: function(event, direction, distance, duration, fingerCount) {
-					self.navigateToNext();
+					self.navigateToPrevious();
 				}
 			});
 		},

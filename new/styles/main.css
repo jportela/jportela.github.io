@@ -303,7 +303,7 @@ a:hover, a:active {
 		min-width: 320px;
 	}
 
-	#home {
+	.presentation {
 		width: auto;
 		min-width: 300px;
 	}
@@ -312,14 +312,22 @@ a:hover, a:active {
 		display: none;
 	}
 
+	.menu-list {
+		float: left;
+	}
+
 	.menu-link {
-		float: right;
-		padding: 0 10px;
-		width: 85px;
+		padding: 0 5px;
+		width: 90px;
 	}
 
 	.ui-carousel-prev, .ui-carousel-next {
 		margin-top: 0;
+		text-indent: 0;
+		background: none;
+		width: auto;
+		height: auto;
+		color: #0060C9;
 	}
 
 	.work-projects-container {
