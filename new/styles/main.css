@@ -334,6 +334,13 @@ a:hover, a:active {
 		margin: 0;
 		clear: both;
 	}
+
+	
+	section p, section li {
+		font-size: 0.9em;
+		line-height: 1.1em;
+		margin: 5px 0;
+	}
 }
 
 @media all and (max-height: 470px) {
