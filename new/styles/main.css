@@ -233,6 +233,23 @@ a:hover, a:active {
 	display: inline-block;
 	margin-left: 5px;
 	text-align: center;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.contact-item:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.contact-item a:hover {
+	text-decoration: none;
 }
 
 .contact-item:first-child {
@@ -379,6 +396,15 @@ a:hover, a:active {
 		line-height: 1.1em;
 		margin: 5px 0;
 	}
+
+	.who-experience h3 {
+		font-size: 1.2em;
+	}
+
+	.skill-list strong {
+		font-size: 1.1em;
+	}
+
 }
 
 @media all and (max-height: 470px) {
@@ -441,6 +467,14 @@ a:hover, a:active {
 		width: auto;
 		min-width: 300px;
 		margin: 50px 0 0 0;
+	}
+
+	.who-experience h3 {
+		font-size: 1.2em;
+	}
+
+	.skill-list strong {
+		font-size: 1.1em;
 	}
 }
 
