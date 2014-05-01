@@ -7,6 +7,9 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 		
 	return {
 		initialise: function () {
+			if (!$.support.transition) {
+				$.fn.transition = $.fn.animate;
+			}
 			this.initialiseLocation();
 			this.installHandler();
 			scroll.install(this);
