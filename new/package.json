@@ -1,0 +1,30 @@
+{
+  "name": "jportela",
+  "version": "1.0.0",
+  "description": "Personal website of Joao Portela, a software developer.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jportela/jportela.github.io"
+  },
+  "keywords": [
+    "personal",
+    "portfolio"
+  ],
+  "private": true,
+  "author": "Joao Portela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jportela/jportela.github.io/issues"
+  },
+  "homepage": "https://github.com/jportela/jportela.github.io",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-cssmin": "^0.9.0"
+  }
+}

@@ -38,5 +38,5 @@ define(['../jquery'], function ($) {
 				self.executeHook(data.hook, data);
 			});
 		}
-	}
+	};
 });

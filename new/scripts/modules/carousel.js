@@ -46,5 +46,5 @@ define(['../jquery', '../owl.carousel'], function ($, owl) {
 			});
 			
 		}
-	}
+	};
 });

@@ -114,7 +114,7 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 		},
 
 		executeNavigationHook: function (node) {
-			var data = node.data();;
+			var data = node.data();
 			if (node.hasClass('ui-navigation-hook')) {
 				hook.executeHook(data.hook, data);
 			}
@@ -173,5 +173,5 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 			return _isAnimating;
 		}
 
-	}
+	};
 });

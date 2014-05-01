@@ -53,6 +53,6 @@ define(['../../jquery',  '../../jquery.mousewheel.min'], function ($, mousewheel
 				window.clearTimeout(scrollTimer);
 			}
 		},
-	}
+	};
 
 });
