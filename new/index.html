@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
     <head>
         <title>João Portela - Software Developer</title>
         <meta charset="UTF-8" />
@@ -8,7 +8,9 @@
         <!--[if lt IE 9]>
             <script src="scripts/html5shivmin.js"></script>
         <![endif]-->
-
+        <script>
+            document.documentElement.className = '';    //remove no-js class
+        </script>
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/owl.carousel.css">
         <link rel="stylesheet" href="styles/main.css">
@@ -42,19 +44,70 @@
             
                 <section id="who" class="ui-navigation-hook" data-hook="add-class" data-target="#menu-home" data-name="is-visible">
                     <h2>Who?</h2>
-                    <p>I'm João Portela, a Software Developer with a passion for creating engaging experiences. My unique background provides a valuable asset in designing, architecting and implementing high-performance, user-focused products.</p>
+                    <p>I'm João Portela, a Software Developer with a passion for creating engaging experiences. My unique background provides a valuable asset in designing, architecting and implementing high-performance, user-focused products. I have hands-on experience with the following:</p>
 
-                    <p>I'm currently a Front End Developer at Blip, implementing high performance web applications used by millions of users worldwide.</p>
+                    <div class="ui-carousel-prev" data-target=".who-experience">
+                        Previous
+                    </div>
+                    <div class="ui-carousel-next" data-target=".who-experience">
+                        Next
+                    </div>
 
-                    <p>I have hands-on experience with the following:</p>
-
-                    <ul class="who-experience">
-                        <li><strong>Languages</strong>: Javascript, HTML, C/C++, Java</li>
-                        <li><strong>Frameworks</strong>: YUI, Freemarker, Less, jQuery, Ruby on Rails</li>
-                        <li><strong>Tools</strong>: Git, SVN, Intellij IDEA, Balsamiq Mockups, Chrome, Firefox, Internet Explorer</li>
-                        <li><strong>Methodologies</strong>: Scrum, Kanban, TSP/PSP</li>
-                    </ul>
-
+                    <div class="ui-carousel-container">
+                        <div class="who-experience ui-carousel owl-carousel">
+                            <div class="who-experience-languages">
+                                <h3>Languages</h3>
+                                <ul class="skill-list">
+                                    <li><strong>Javascript</strong></li>
+                                    <li>Ruby</li>
+                                    <li><strong>HTML/CSS</strong></li>
+                                    <li><strong>C/C++</strong></li>
+                                    <li>Python</li>
+                                    <li><strong>Java</strong></li>
+                                </ul>
+                            </div>
+                            <div class="who-experience-frameworks">
+                                <h3>Frameworks</h3>
+                                <ul class="skill-list">
+                                    <li><strong>YUI</strong></li>
+                                    <li>RequireJS</li>
+                                    <li><strong>Freemarker</strong></li>
+                                    <li>NodeJS</li>
+                                    <li><strong>Less</strong></li>
+                                    <li>Bower</li>
+                                    <li><strong>jQuery</strong></li>
+                                    <li>Kivy</li>
+                                    <li>Spring</li>
+                                    <li><strong>Ruby on Rails</strong></li>
+                                </ul>
+                            </div>
+                            <div class="who-experience-tools">
+                                <h3>Tools</h3>
+                                <ul class="skill-list">
+                                    <li><strong>Git</strong></li>
+                                    <li>SVN</li>
+                                    <li><strong>Chrome</strong></li>
+                                    <li>IntelliJ IDEA</li>
+                                    <li>Sublime Text</li>
+                                    <li><strong>Firefox</strong></li>
+                                    <li>Jenkins</li>
+                                    <li><strong>Internet Explorer</strong></li>
+                                </ul>
+                            </div>
+                            <div class="who-experience-methodologies">
+                                <h3>Methodologies</h3>
+                                <ul class="skill-list">
+                                    <li><strong>Scrum</strong></li>
+                                    <li>Kanban</li>
+                                    <li>TDD/BDD</li>
+                                    <li><strong>Continuous Delivery</strong></li>
+                                    <li>TSP/PSP</li>
+                                    <li><strong>Agile</strong></li>
+                                    <li>Extreme Programming</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="projects" class="ui-navigation-hook" data-hook="add-class" data-target="#menu-home" data-name="is-visible">
@@ -68,7 +121,7 @@
                         Next
                     </div>
 
-                    <div class="work-projects-container">
+                    <div class="ui-carousel-container">
                         <div class="work-projects ui-carousel owl-carousel">
                             <div class="work-project">
                                 <h3 class="work-project-title">Is My Javascript On?</h3>

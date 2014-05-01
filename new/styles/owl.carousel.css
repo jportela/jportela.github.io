@@ -24,6 +24,14 @@
 	position: relative;
 	-webkit-transform: translate3d(0px, 0px, 0px);
 }
+
+.no-js .owl-carousel{
+	display: block;
+}
+.no-js .owl-carousel .owl-wrapper{
+	display: block;
+}
+
 .owl-carousel .owl-wrapper-outer{
 	overflow: hidden;
 	position: relative;
