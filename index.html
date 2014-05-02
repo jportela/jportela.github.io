@@ -1,73 +1,203 @@
 <!DOCTYPE html>
-<!--[if lt IE 9]> <html class="ua-lt-ie9"> <![endif]-->
+<!--[if lt IE 9]>
+    <html lang="en" class="ua-lt-ie9 no-js">
+<![endif]-->
+
 <!--[if (!IE) | (ge IE 9)]><!-->
-<html lang="en"><!--<![endif]-->
+<html lang="en" class="no-js"><!--<![endif]-->
     <head>
         <title>João Portela - Software Developer</title>
         <meta charset="UTF-8" />
-        <meta name="description" content="Personal website of João Portela, a software developer, currently working on the frontend side of the web." />
-        <meta name="viewport" content="width=device-width" />
-        <script src="scripts/modernizr.custom.78901.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="styles/main.css">
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-26813975-1']);
-            _gaq.push(['_trackPageview']);
+        <meta name="description" content="Personal website of João Portela, a software developer, specialized in bringing your vision to reality." />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-            (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@joaoppcportela">
+        <meta name="twitter:title" content="João Portela - Software Developer">
+        <meta name="twitter:description" content="Personal website of João Portela, a software developer, specialized in bringing your vision to reality.">
+        <meta name="twitter:creator" content="@joaoppcportela">
+        <meta name="twitter:image" content="http://www.gravatar.com/avatar/f5a0b9efc6352f6934e48b77d04ba25f.png">
+
+        <!--[if lt IE 9]>
+            <script src="scripts/html5shivmin.js"></script>
+        <![endif]-->
+        <script>
+            (function () {
+                var className = document.documentElement.className;
+                document.documentElement.className = className.replace(/(?:^|\s)no-js(?!\S)/g , '');    //remove no-js class
+            }());
         </script>
+        
+        <!-- DEV:
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/owl.carousel.css">
+        <link rel="stylesheet" href="styles/main.css"> 
+        -->
+        
+        <link rel="stylesheet" href="release/all.css">
+        
+        <!-- DEV: <script data-main="scripts/main" src="scripts/require.js"></script> -->
+        <script src="release/all.js"></script>
+
     </head>
     <body>
-        <section class="content">
-            <header>
-                <h1>João Portela</h1>
-                <h2>Software Developer</h2>
-            </header>
-    
-            <div class="description">
-                <div class="description-item">
-                    <ul class="attributes-list">
-                        <li class="attributes-header">I develop software that is:</li>
-                        <li class="attributes-item">User centered</li>
-                        <li class="attributes-item">Efficient</li>
-                        <li class="attributes-item">Innovative</li>
-                    </ul>   
-                </div>
-    
-                <div class="description-item">
-                    <ul class="attributes-list">    
-                        <li class="attributes-header">By applying skills of great:</li>                    
-                        <li class="attributes-item">Design</li>
-                        <li class="attributes-item">Architecture</li>
-                        <li class="attributes-item">Coding</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <p class="story">
-                I'm currently a <em>Front End Developer</em> at <a href="http://www.blip.pt" target="_blank">Blip</a>, 
-                implementing high performance web applications used by millions of users worldwide.
-            </p>
-    
-            <h3>Keep in touch</h3>
-            <ul class="contact">
-                <li class="contact-item">
-                    <a class="contact-email" href="mailto:joao.portela@gmail.com">Email</a>
-                </li>
-                <li class="contact-item">
-                    <a class="contact-linkedin" href="http://www.linkedin.com/in/joaoportela" target="_blank">LinkedIn</a>
-                </li>
-                <li class="contact-item">
-                    <a class="contact-twitter" href="http://twitter.com/joaoppcportela" target="_blank">Twitter</a>
-                </li>
-                <li class="contact-item">
-                    <a class="contact-cv" href="http://goo.gl/iN6mD" target="_blank">CV</a>
-                </li>
+        <header>
+            <h1>João Portela - Software Developer</h1>
+        </header>
+        <nav class="menu ui-navigation">
+            <a id="menu-home" href="#home" class="menu-link" rel="nofollow">João Portela</a>
+            <ul class="menu-list">
+                <li><a id="menu-who" href="#who" class="menu-link" rel="nofollow">Who?</a></li>
+                <li><a id="menu-projects" href="#projects" class="menu-link" rel="nofollow">Projects</a></li>
+                <li><a id="menu-contact" href="#contact" class="menu-link" rel="nofollow">Contact me</a></li>
             </ul>
-        </section>
+        </nav>
+        <div class="main-background">
+            <div class="ui-navigation-container" data-selected="home">
+
+                <section id="home" class="ui-navigation-hook" data-hook="remove-class" data-target="#menu-home" data-name="is-visible">
+                    <div class="presentation">
+                        <p class="presentation-name">
+                            Hi, I'm <strong>João Portela</strong>.
+                        </p>
+                        <p class="presentation-description">
+                            I'm a Software Developer, specialized in turning your vision into reality.
+                        </p>    
+                    </div>
+                </section>
+            
+                <section id="who" class="ui-navigation-hook" data-hook="add-class" data-target="#menu-home" data-name="is-visible">
+                    <h2>Who?</h2>
+                    <p>I'm João Portela, a Software Developer with a passion for creating engaging experiences. My unique background provides a valuable asset in designing, architecting and implementing high-performance, user-focused products. I have hands-on experience with the following:</p>
+
+                    <div class="ui-carousel-controls" data-target="#who-experience">
+                        <a class="ui-carousel-prev is-disabled" data-direction="prev">Previous</a>
+                        <a class="ui-carousel-next" data-direction="next">Next</a>
+                    </div>
+
+                    <div class="ui-carousel-container">
+                        <div id="who-experience" class="ui-carousel owl-carousel">
+                            <div class="who-experience-languages">
+                                <h3>Languages</h3>
+                                <ul class="skill-list">
+                                    <li><strong>Javascript</strong></li>
+                                    <li>Ruby</li>
+                                    <li><strong>HTML/CSS</strong></li>
+                                    <li><strong>C/C++</strong></li>
+                                    <li>Python</li>
+                                    <li><strong>Java</strong></li>
+                                </ul>
+                            </div>
+                            <div class="who-experience-frameworks">
+                                <h3>Frameworks</h3>
+                                <ul class="skill-list">
+                                    <li><strong>YUI</strong></li>
+                                    <li>RequireJS</li>
+                                    <li><strong>Freemarker</strong></li>
+                                    <li>NodeJS</li>
+                                    <li><strong>Less</strong></li>
+                                    <li>Bower</li>
+                                    <li><strong>jQuery</strong></li>
+                                    <li>Kivy</li>
+                                    <li><strong>Jasmine</strong></li>
+                                    <li><strong>Ruby on Rails</strong></li>
+                                </ul>
+                            </div>
+                            <div class="who-experience-tools">
+                                <h3>Tools</h3>
+                                <ul class="skill-list">
+                                    <li><strong>Git</strong></li>
+                                    <li>SVN</li>
+                                    <li><strong>Chrome</strong></li>
+                                    <li>IntelliJ IDEA</li>
+                                    <li>Sublime Text</li>
+                                    <li><strong>Firefox</strong></li>
+                                    <li>Jenkins</li>
+                                    <li><strong>Internet Explorer</strong></li>
+                                    <li>Grunt</li>
+                                </ul>
+                            </div>
+                            <div class="who-experience-methodologies">
+                                <h3>Methodologies</h3>
+                                <ul class="skill-list">
+                                    <li><strong>Scrum</strong></li>
+                                    <li>Kanban</li>
+                                    <li><strong>TDD/BDD</strong></li>
+                                    <li>User-Centered Design</li>
+                                    <li>TSP/PSP</li>
+                                    <li><strong>Agile</strong></li>
+                                    <li>Extreme Programming</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects" class="ui-navigation-hook" data-hook="add-class" data-target="#menu-home" data-name="is-visible">
+                    <h2>Projects</h2>
+                    <p>Aside from my work projects, I'm engaged in other personal projects, because I love to learn new technologies, and because I believe in constant self-improvement. Here are a few of the projects I'm most proud of:</p>
+
+                    <div class="ui-carousel-controls" data-target="#work-projects">
+                        <a class="ui-carousel-prev is-disabled" data-direction="prev">Previous</a>
+                        <a class="ui-carousel-next" data-direction="next">Next</a>
+                    </div>
+
+                    <div class="ui-carousel-container">
+                        <div id="work-projects" class="ui-carousel owl-carousel">
+                            <div class="work-project">
+                                <h3 class="work-project-title">Is My Javascript On?</h3>
+                                <a target="blank_" href="img/ismyjavascripton.png" class="work-project-cover"><img src="img/ismyjavascripton_200.png" alt="Is My Javascript On" /></a>
+                                <p class="work-project-description">
+                                    Javascript detector, with a twist. 
+                                    <a target="_blank" href="http://ismyjavascripton.com/">Link</a>&nbsp;|&nbsp;<a target="_blank" href="https://github.com/jportela/ismyjavascripton/">GitHub</a>
+                                </p>
+                            </div>
+                            <div class="work-project">
+                                <h3 class="work-project-title">Master's Dissertation</h3>
+                                <a target="blank_" href="img/dissertation.png" class="work-project-cover" ><img src="img/dissertation_200.png" alt="Master's Dissertation" /></a>
+                                <p class="work-project-description">
+                                    Multitouch Interaction for Interface Prototyping. <a target="_blank" href="http://paginas.fe.up.pt/~ei07126/thesis/wiki/">Link</a>
+                                </p>
+                            </div>
+                            <div class="work-project">
+                                <h3 class="work-project-title">FEUP Classificados</h3>
+                                <a target="blank_" href="img/classificados.png" class="work-project-cover" ><img src="img/classificados_200.png" alt="FEUP Classificados" /></a>
+                                <p class="work-project-description">
+                                    Classifieds portal for FEUP community. <a target="_blank" href="https://github.com/jportela/nifeup-classificados">GitHub</a>
+                                </p>
+                            </div>
+                            <div class="work-project">
+                                <h3 class="work-project-title">João Portela</h3>
+                                <a target="blank_" href="img/website.png" class="work-project-cover" ><img src="img/website_200.png" alt="João Portela Website" /></a>
+                                <p class="work-project-description">
+                                    This website. <a target="_blank" href="https://github.com/jportela/jportela.github.io">GitHub</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="ui-navigation-hook"  data-hook="add-class" data-target="#menu-home" data-name="is-visible">
+                    <h2>Contact me</h2>
+                    <p>Thank you for visiting me! Please stay in touch.</p>
+
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <a class="contact-email" href="mailto:joao.portela@gmail.com">Email</a>
+                        </li>
+                        <li class="contact-item">
+                            <a class="contact-linkedin" href="http://www.linkedin.com/in/joaoportela" target="_blank">LinkedIn</a>
+                        </li>
+                        <li class="contact-item">
+                            <a class="contact-twitter" href="http://twitter.com/joaoppcportela" target="_blank">Twitter</a>
+                        </li>
+                        <li class="contact-item">
+                            <a class="contact-cv" href="http://goo.gl/iN6mD" target="_blank">CV</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
     </body>
 </html>

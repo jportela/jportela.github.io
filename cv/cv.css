@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
 /**
@@ -423,3 +427,110 @@ td,
 th {
   padding: 0;
 }
+
+/** Custom Styling **/
+
+ul {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    padding-left: 0.5em;
+}
+
+.contact {
+    text-align: right;
+    font-size: 0.9em;
+    padding: 0;     
+}
+
+.contact li {
+    display: inline-block;
+    text-align: left;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    float: right;
+    font-size: 2em;
+    margin: 0;
+}
+
+h2 {
+    margin: 0 0 1em 0;
+}
+
+h3 {
+    margin: 1.5em 0 0.5em 0;
+    width: 23%;
+    font-size: 1em;
+    text-align: right;
+}
+
+.content {
+    width: 50em;
+    margin: 3em auto;
+}
+
+dt {
+    float: left;
+    width: 23%;
+    text-align: right;
+    padding: 0.2em 0;
+}
+
+dl {
+    margin: 0 0 1em 0;
+    line-height: 1.5em;
+}
+
+dd {
+    margin-left: 25%;
+    border-left: 1px solid black;
+    line-height: 1.5em;
+    padding: 0.2em 0.5em;
+}
+
+dd p {
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+dl li:before {
+    content: '- ';
+}
+
+@media print {
+    body {
+        font-size: 11px;
+    }
+}
+
+/* Base 64 Icons */
+.email-icon, .phone-icon, .web-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -9999em;
+}
+
+.email-icon {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAaJJREFUeNrEU7mKAlEQrHmOB56gBiaiiLeIaGJoaupnzF/4FRoroqJ/YiZqYGgimBh5nzvVi4sssrtgsA0Nb2a6qqur32j3+x3vhMKbobfb7cbhcDAcDsffQbqO3W4Hm83W1Pf7vZHJZFAoFGC323G73X6WrBTO5zOm0ykmk4mh6EE2m0W/3wfP1+sVp9PpZfLb5XLBYDAAm7KZOh6PsFqtKJVKaLVasFgs0oESn5MEmqah2+2iXC7LmVhlzi+sXq8X8XgcpidwuVxCstlsJAl2Op0Czufz0pAYYpXpgRRst1v4/X5Eo1F0Oh0Eg0GRSNmBQEBGTKfT4hNriSH2SwEfKKtYLIoXvV4PsVhMcjgcgltKJpNSw9qHAm5B5NLdUCiE8XgsM67Xa9TrdZFbrVbh8Xjouhi+WCwEQ6wQEBwOhwUciUTgdrslK5WKdCYxd2/uHbPZDKlUSlQKAZ0k+2g0QiKRgM/nk30TmMvlZOZH8B1J5vO5jEqsTinL5VKk0cTneHU7H8Sr1epztbVarWGOYPx2A78HzTTHaGr//jd+CDAACGIEig6fBcsAAAAASUVORK5CYII=');
+}
+
+.phone-icon {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF6SURBVDjLjZO/S8NAFMe/l8Q0ASUUXRwK9R9wFDfdunV19Q9wcmg3/wHp4FLo4CA4Ce3o6OLWUZwKpbRLMdDFCKH5dd73SkvQkvTgeLnLe5/3vXfvhJQSu4xutyuDIEC73Rb5fQM7jizLMBwO/+1b+UWv1+soRZdCiGO1PFJzT33r4Hq9DsuyigFRFN02Gg1UKpWNc5qmehJimmYxgE6e5+GsX4VrZQgzHlfiwI7xdP5VroAOzCZMidaFgGVIENH5sPAdZeUAwzAQxzGECrSpVt0Qq0ygErKbAh5DqOC7dxWj0gtKEGSl5QAWiYCX009t18Wj9UxvK8DYBugHz3hN+hiNRnp9+PAINlzpLawBTedqlflkpcC/uUYVKFewrsF4PNZ2MpnozLPZbJOg9AgMYNdx0BJUq9U2CQoBvEYGzOdz2LYN3/fhOA4Wi4UG839hDVTf/4RhuJ9XwLdAy/5Qr1EWAqbT6f1gMGgul0sdmAMjSRK4rvv2F/ALQmi5wbpDa1QAAAAASUVORK5CYII=');
+}
+
+.web-icon {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAANPSURBVBgZBcHdT1tlAMDh3zltORT6Ob4mtWDGMpgiU8LcEooJyiaEGbNkCkaNCVfeGP4Dr7zBG42J3hiVZInTeTMvFAPBYRhmGDBjEYaAMhhtVzraUjin5+M95/V5FCklAAAA4wtjfcCHwHmgAfADh8Ci9OSXn/d9+ysAAIAipQRgfGHMD0wC115PDmjxYANloxbDBuGaCHLMZqeEK9wZIdy3vh76/hhAkVIyvjAWAG731D/XeznZT9nUsLDZKitUSY0Dw0MKmyAGWWuepczSfeGIl79789ahCgBMdted6U0191BwbRxVQQiViqjCoIqCpbFvBtk7DNASeomek+1dtuXcAPAVL+2mgE/eOXPF97erk6VCxRMcmyEKVoCyCZvpIw51HS1+gBLd5GJ9B7Nrf566vji54rsw9uKnrzVf6FR8QbKqANnIU26I5ZyPiqmylj7Gqy6itf6DFdkk7xXxF10665Lq8sP1E37gfDKS4J6RIV+t8qyvDQ/Bzr6NaVaInpSUT0yz5ZXAksSExmbeYuCZbhxLPO8H6mr8tewYGfYtg3DNKUp2mGLRI9pg0hg3yLsvULZW0OQRR08OKJRqCAXDOLaI+aWUiiLBtspIkvgDLlN3HZRgiOyWQJURmhsqhI/6KKcdTJZw7G2QEiGE4neFVyjb5USdL0a4+hw7aQ9lZ502nvB0Yx3rd7LcpwNHFZzzVuloaSOTq2Zx/gGeJct+4Yi/HhZ2E6drksyk59H/OKY7mGBk5D10Xadtbw///CK6A++PXqO6KkA2m2V5eZloNm75ukbOHqzub789fDql3p6ZJb4f4sobV/nos6+4deM629v/0daSwDrM89vsLDd/vEnRyNLfd4nibimgfjP8w7RtOb9Mr/1O+CBINBwFIHZxCMO0GB0dJZVKMTQ0xODgIKZVwdduAhCLxlQ/gGM5785t3rtTT6SLfA4A4+5PKNJjYmKC2tpaAHRdR3qwMvXIGP6AmnQ6bSpSSgAGv3glbKTNnyP/xlOv9g4oiUSSgOojl8uxsbGBpmm0trbS1NSEI5zS3qM95ubmHitSSgAA2tvbfY399eOhx5GPmxubq7UqTVFQeKCsllyfu90pus4qKFiW5WYymbyu61f/B/q4pKqmYKY6AAAAAElFTkSuQmCC');
+}
+
