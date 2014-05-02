@@ -130,6 +130,7 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 
 			this.updateLocation(id);
 			this.executeNavigationHook(node);
+			this.sendAnalytics(id);
 		},
 
 		updateLocation: function (id) {
@@ -201,6 +202,12 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 
 		isAnimating: function () {
 			return _isAnimating;
+		},
+
+		sendAnalytics: function (id) {
+			if (window.ga) {
+				window.ga('send', 'event', 'Interface', 'Viewed Slide', '#' + id);
+			}
 		}
 
 	};
