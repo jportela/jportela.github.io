@@ -2,6 +2,22 @@ define(['../jquery', '../owl.carousel'], function ($, owl) {
 
 	var CAROUSEL_SELECTOR = '.ui-carousel',
 		NAVIGATION_CONTAINER = '.ui-navigation-container';
+
+	function afterMoveCallback (elem) {
+		var node = $(elem),
+			id = elem.attr('id'),
+			controls = $('.ui-carousel-controls').filter('[data-target="#' + id + '"]'),
+			children = controls.children();
+
+		children.removeClass('is-disabled');
+
+		if (this.currentItem >= this.maximumItem) {
+			children.filter('.ui-carousel-next').addClass('is-disabled');
+		}
+		else if (this.currentItem <= 0) {
+			children.filter('.ui-carousel-prev').addClass('is-disabled');
+		}
+	}
 	
 	return {
 		initialise: function () {
@@ -14,17 +30,19 @@ define(['../jquery', '../owl.carousel'], function ($, owl) {
 		        itemsTabletSmall : false,
 				itemsMobile : false,
 				pagination: false,
-				rewindNav: false
+				rewindNav: false,
+				mouseDrag: false,
+				afterMove: afterMoveCallback
 			});
 
-			$(".ui-carousel-next").click(function () {
-				var carousel = $(this).attr('data-target');
-				$(carousel).trigger('owl.next');
-			});
+			$(".ui-carousel-controls").on('click', 'a', function (event) {
+				var carouselSelector = $(event.delegateTarget).attr('data-target'),
+					direction = $(event.currentTarget).attr('data-direction'),
+					carousel = $(carouselSelector);
 
-			$(".ui-carousel-prev").click(function () {
-				var carousel = $(this).attr('data-target');
-				$(carousel).trigger('owl.prev');
+				if (direction && carousel.length > 0) {
+					carousel.trigger('owl.' + direction);
+				}
 			});
 
 			$(window).keydown(function (event) {

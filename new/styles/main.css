@@ -49,7 +49,7 @@ a:hover, a:active {
 	right: 0;
 }
 
-.no-js .main-background {
+.no-js .main-background, .ua-lt-ie9 .main-background {
 	overflow: scroll;
 }
 
@@ -297,7 +297,13 @@ a:hover, a:active {
 	margin-top: 100px;
 }
 
-.no-js .ui-carousel-prev, .no-js .ui-carousel-next {
+.ui-carousel-prev.is-disabled, .ui-carousel-next.is-disabled, 
+.ui-carousel-prev:hover.is-disabled, .ui-carousel-next:hover.is-disabled  {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.no-js .ui-carousel-controls {
 	display: none;
 }
 
@@ -330,11 +336,11 @@ a:hover, a:active {
 	color: black;
 }
 
-.who-experience {
+#who-experience {
 	background: rgba(255, 255, 255, 0.5);
 }
 
-.who-experience h3 {
+#who-experience h3 {
 	text-align: center;
 	font-size: 2em;
 }

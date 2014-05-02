@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<!--[if lt IE 9]> <html lang="en" class="ua-lt-ie9 no-js"> <![endif]-->
+<!--[if (!IE) | (ge IE 9)]><!-->
+<html lang="en" class="no-js"><!--<![endif]-->
     <head>
         <title>João Portela - Software Developer</title>
         <meta charset="UTF-8" />
@@ -18,13 +20,18 @@
             <script src="scripts/html5shivmin.js"></script>
         <![endif]-->
         <script>
-            document.documentElement.className = '';    //remove no-js class
+            (function () {
+                var className = document.documentElement.className;
+                document.documentElement.className = className.replace(/(?:^|\s)no-js(?!\S)/g , '');    //remove no-js class
+            }());
         </script>
+        
         <!-- DEV:
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/owl.carousel.css">
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/main.css"> 
         -->
+        
         <link rel="stylesheet" href="release/all.css">
         
         <!-- DEV: <script data-main="scripts/main" src="scripts/require.js"></script> -->
@@ -61,15 +68,13 @@
                     <h2>Who?</h2>
                     <p>I'm João Portela, a Software Developer with a passion for creating engaging experiences. My unique background provides a valuable asset in designing, architecting and implementing high-performance, user-focused products. I have hands-on experience with the following:</p>
 
-                    <div class="ui-carousel-prev" data-target=".who-experience">
-                        Previous
-                    </div>
-                    <div class="ui-carousel-next" data-target=".who-experience">
-                        Next
+                    <div class="ui-carousel-controls" data-target="#who-experience">
+                        <a class="ui-carousel-prev is-disabled" data-direction="prev">Previous</a>
+                        <a class="ui-carousel-next" data-direction="next">Next</a>
                     </div>
 
                     <div class="ui-carousel-container">
-                        <div class="who-experience ui-carousel owl-carousel">
+                        <div id="who-experience" class="ui-carousel owl-carousel">
                             <div class="who-experience-languages">
                                 <h3>Languages</h3>
                                 <ul class="skill-list">
@@ -130,15 +135,13 @@
                     <h2>Projects</h2>
                     <p>Aside from my work projects, I'm engaged in other personal projects, because I love to learn new technologies, and because I believe in constant self-improvement. Here are a few of the projects I'm most proud of:</p>
 
-                    <div class="ui-carousel-prev" data-target=".work-projects">
-                        Previous
-                    </div>
-                    <div class="ui-carousel-next" data-target=".work-projects">
-                        Next
+                    <div class="ui-carousel-controls" data-target="#work-projects">
+                        <a class="ui-carousel-prev is-disabled" data-direction="prev">Previous</a>
+                        <a class="ui-carousel-next" data-direction="next">Next</a>
                     </div>
 
                     <div class="ui-carousel-container">
-                        <div class="work-projects ui-carousel owl-carousel">
+                        <div id="work-projects" class="ui-carousel owl-carousel">
                             <div class="work-project">
                                 <h3 class="work-project-title">Is My Javascript On?</h3>
                                 <a target="blank_" href="img/ismyjavascripton.png" class="work-project-cover"><img src="img/ismyjavascripton.png" alt="Is My Javascript On" /></a>
