@@ -1,8 +1,18 @@
+/**
+ *   CAROUSEL MODULE
+ *   This module defines the carousel/sliders interactions in the page, 
+ *   by instantiating a Owl Carousel
+ *   https://github.com/OwlFonk/OwlCarousel
+ *
+ */
+
 define(['../jquery', '../owl.carousel'], function ($, owl) {
 
 	var CAROUSEL_SELECTOR = '.ui-carousel',
 		NAVIGATION_CONTAINER = '.ui-navigation-container';
 
+	/*  Callback for when the carousel finishes a prev/next transition.
+		Enables/disables navigation arrows */
 	function afterMoveCallback (elem) {
 		var node = $(elem),
 			id = elem.attr('id'),
@@ -35,6 +45,7 @@ define(['../jquery', '../owl.carousel'], function ($, owl) {
 				afterMove: afterMoveCallback
 			});
 
+			// navigation event handler
 			$(".ui-carousel-controls").on('click', 'a', function (event) {
 				var carouselSelector = $(event.delegateTarget).attr('data-target'),
 					direction = $(event.currentTarget).attr('data-direction'),
@@ -45,6 +56,7 @@ define(['../jquery', '../owl.carousel'], function ($, owl) {
 				}
 			});
 
+			// keyboard event handler, for the current page
 			$(window).keydown(function (event) {
 				var selected = $(NAVIGATION_CONTAINER).attr('data-selected'),
 					carousel = $('#' + selected + ' ' + CAROUSEL_SELECTOR);

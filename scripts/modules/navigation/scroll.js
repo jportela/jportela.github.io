@@ -1,3 +1,5 @@
+// Scroll based navigation
+
 define(['../../jquery',  '../../jquery.mousewheel.min'], function ($, mousewheel) {
 	var SCROLL_SENSITIVITY = 70,
 		SCROLL_DELAY = 100,

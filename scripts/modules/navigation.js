@@ -1,3 +1,7 @@
+/**
+ *	Defines slide/scroll based navigation for the page
+ */
+
 define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../modules/navigation/keyboard', '../jquery.transit', '../jquery.touchSwipe.min'], function ($, hook, scroll, keyboard, transit, touchswipe) {
 	var NAVIGATION_SELECTOR = '.ui-navigation',
 		NAVIGATION_CONTAINER_SELECTOR = '.ui-navigation-container',
@@ -9,10 +13,17 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 		initialise: function () {
 			this.initialiseLocation();
 			this.installHandler();
+
+			//install scroll and keyboard plugins
 			scroll.install(this);
 			keyboard.install(this);
 		},
 
+		/**
+		 * 	If a hash location is defined on the location bar, (for instance #who)
+		 *  it will force the browser to go to the location and update related state.
+		 *  Transition to home page (index.html) will be ignored unless forceHome=true
+		 */
 		initialiseLocation: function (forceHome) {
 			var hash = window.location.hash,
 				container = $(NAVIGATION_CONTAINER_SELECTOR),
@@ -31,11 +42,9 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 			}
 		},
 
-		navigateBySelector: function (selector) {
-			var node = selector ? $(selector) : null;
-			this.navigate(node);
-		},
-
+		/**
+		 *  Navigates to a particular node
+		 */
 		navigate: function (node) {
 			var container = $(NAVIGATION_CONTAINER_SELECTOR),
 				self = this,
@@ -67,6 +76,17 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 			}
 		},
 
+		/**
+		 *  Navigates to a specific node by providing a Sizzle selector
+		 */
+		navigateBySelector: function (selector) {
+			var node = selector ? $(selector) : null;
+			this.navigate(node);
+		},
+
+		/**
+		 *  Updates menu state, to mimick tab affordances
+		 */
 		updateMenu: function (id) {
 			var navigationLinks = $(NAVIGATION_SELECTOR + ' a');
 
@@ -74,6 +94,10 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 			navigationLinks.filter('[href=#' + id + ']').addClass('is-selected');
 		},
 
+		/**
+		 *  Goes to a specific node. Different from navigate because it doesn't
+		 *  use any animation nor updates any state
+		 */
 		goToNode: function (node) {
 			var container = $(NAVIGATION_CONTAINER_SELECTOR);
 
@@ -84,6 +108,9 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 			});
 		},
 
+		/**
+		 *  Goes to the selected node (data-selected)
+		 */
 		goToSelectedNode: function () {
 			var container = $(NAVIGATION_CONTAINER_SELECTOR),
 				node = $('#' + container.attr('data-selected'));
@@ -91,6 +118,9 @@ define(['../jquery',  '../modules/hook', '../modules/navigation/scroll', '../mod
 			this.goToNode(node);
 		},
 
+		/**
+		 *  Callback to be executed on navigation end
+		 */
 		onNavigationEnd: function (container, node) {
 			var id = node.attr('id');
 
