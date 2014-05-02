@@ -1,3 +1,4 @@
+// Keyboard based navigation
 define(['../../jquery'], function ($) {
 	return {
 		install: function (host) {
