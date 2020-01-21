@@ -430,6 +430,13 @@ th {
 
 /** Custom Styling **/
 
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  width: 50em;
+  margin: 3em auto;
+}
+
 ul {
     margin: 0 0 1em 0;
     padding: 0;
@@ -441,19 +448,19 @@ li {
 }
 
 .contact {
-    text-align: right;
-    font-size: 0.9em;
-    padding: 0;     
+  text-align: right;
+  font-size: 0.9em;
+  padding: 0;
 }
 
-.contact li {
-    display: inline-block;
-    text-align: left;
+.contact dl {
+  display: flex;
+  justify-content: space-between;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+.contact dd {
+  margin: 0 2em 0 0;
+  height: 16px;
 }
 
 h1 {
@@ -473,53 +480,41 @@ h3 {
     text-align: right;
 }
 
-.content {
-    width: 50em;
-    margin: 3em auto;
-}
-
-dt {
+.content dt {
     float: left;
     width: 23%;
     text-align: right;
     padding: 0.2em 0;
 }
 
-dl {
+.content dl {
     margin: 0 0 1em 0;
     line-height: 1.5em;
 }
 
-dd {
+.content dd {
     margin-left: 25%;
     border-left: 1px solid black;
     line-height: 1.5em;
     padding: 0.2em 0.5em;
 }
 
-dd p {
+.content dd p {
     margin: 0;
     padding-bottom: 1em;
 }
 
-dl li:before {
+.content dl li:before {
     content: '- ';
 }
 
-@media print {
-    body {
-        font-size: 11px;
-    }
-}
-
 /* Base 64 Icons */
-.email-icon, .phone-icon, .web-icon {
-    display: inline-block;
-    vertical-align: middle;
+.email-icon, .phone-icon, .web-icon, .github-icon {
+    background-repeat: no-repeat;
+    background-position: left center;
     width: 16px;
     height: 16px;
-    overflow: hidden;
-    text-indent: -9999em;
+    font-size: 0; /* hides text intended for accessibility */
 }
 
 .email-icon {
@@ -534,3 +529,12 @@ dl li:before {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAANPSURBVBgZBcHdT1tlAMDh3zltORT6Ob4mtWDGMpgiU8LcEooJyiaEGbNkCkaNCVfeGP4Dr7zBG42J3hiVZInTeTMvFAPBYRhmGDBjEYaAMhhtVzraUjin5+M95/V5FCklAAAA4wtjfcCHwHmgAfADh8Ci9OSXn/d9+ysAAIAipQRgfGHMD0wC115PDmjxYANloxbDBuGaCHLMZqeEK9wZIdy3vh76/hhAkVIyvjAWAG731D/XeznZT9nUsLDZKitUSY0Dw0MKmyAGWWuepczSfeGIl79789ahCgBMdted6U0191BwbRxVQQiViqjCoIqCpbFvBtk7DNASeomek+1dtuXcAPAVL+2mgE/eOXPF97erk6VCxRMcmyEKVoCyCZvpIw51HS1+gBLd5GJ9B7Nrf566vji54rsw9uKnrzVf6FR8QbKqANnIU26I5ZyPiqmylj7Gqy6itf6DFdkk7xXxF10665Lq8sP1E37gfDKS4J6RIV+t8qyvDQ/Bzr6NaVaInpSUT0yz5ZXAksSExmbeYuCZbhxLPO8H6mr8tewYGfYtg3DNKUp2mGLRI9pg0hg3yLsvULZW0OQRR08OKJRqCAXDOLaI+aWUiiLBtspIkvgDLlN3HZRgiOyWQJURmhsqhI/6KKcdTJZw7G2QEiGE4neFVyjb5USdL0a4+hw7aQ9lZ502nvB0Yx3rd7LcpwNHFZzzVuloaSOTq2Zx/gGeJct+4Yi/HhZ2E6drksyk59H/OKY7mGBk5D10Xadtbw///CK6A++PXqO6KkA2m2V5eZloNm75ukbOHqzub789fDql3p6ZJb4f4sobV/nos6+4deM629v/0daSwDrM89vsLDd/vEnRyNLfd4nibimgfjP8w7RtOb9Mr/1O+CBINBwFIHZxCMO0GB0dJZVKMTQ0xODgIKZVwdduAhCLxlQ/gGM5785t3rtTT6SLfA4A4+5PKNJjYmKC2tpaAHRdR3qwMvXIGP6AmnQ6bSpSSgAGv3glbKTNnyP/xlOv9g4oiUSSgOojl8uxsbGBpmm0trbS1NSEI5zS3qM95ubmHitSSgAA2tvbfY399eOhx5GPmxubq7UqTVFQeKCsllyfu90pus4qKFiW5WYymbyu61f/B/q4pKqmYKY6AAAAAElFTkSuQmCC');
 }
 
+.github-icon {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAABBNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iCiAgICAgICAgICAgIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIj4KICAgICAgICAgPHhtcE1NOkRlcml2ZWRGcm9tIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgPHN0UmVmOmluc3RhbmNlSUQ+eG1wLmlpZDpFNTE3OEEyODk5QTAxMUUyOUExNUJDMTA0NkE4OTA0RDwvc3RSZWY6aW5zdGFuY2VJRD4KICAgICAgICAgICAgPHN0UmVmOmRvY3VtZW50SUQ+eG1wLmRpZDpFNTE3OEEyOTk5QTAxMUUyOUExNUJDMTA0NkE4OTA0RDwvc3RSZWY6ZG9jdW1lbnRJRD4KICAgICAgICAgPC94bXBNTTpEZXJpdmVkRnJvbT4KICAgICAgICAgPHhtcE1NOkRvY3VtZW50SUQ+eG1wLmRpZDpFNTE3OEEyQjk5QTAxMUUyOUExNUJDMTA0NkE4OTA0RDwveG1wTU06RG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOkluc3RhbmNlSUQ+eG1wLmlpZDpFNTE3OEEyQTk5QTAxMUUyOUExNUJDMTA0NkE4OTA0RDwveG1wTU06SW5zdGFuY2VJRD4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpu3rz2AAACXUlEQVQ4EW1TTWtTQRS9M/k0rTQxeS+PEPRPiFJoaJbd6s5lxaULV/4E12IVwYq6FNy4EUpRKIQuBD82gqIujIQkzXuLLIxtSGbGc+Y9sQtvMpkz955zZ+6diZLUNCZLGARBR4veFnFdLC/QB+uLqAMr9mkcx73UJV6jsPCg3W6fWcwX9yG8rpQS5xx5Pik5/3zqSaFUuDkYDI69n6xWq1Wxi+We0rrjhdA6fCii0afw8V8mt7anC/mt4XD4m7uLWZgdrXMda80BuDesuA9wHwN/4SCmz8fAIZcaaiVqNDabQeiisOmiRviQPpaDXkSABQ5i+hgjh1yvgTZvld5GgYyJU2rBGfWdYGKN3tC4MYAnkUPA8iyarZWTLlmo88Q484AYxtI879SclgsOuSRRq0Frc4EUcbVa/eFh2n1ew+nhbyTluNjzoGVWJARPqZUkSXydWZL/TilHr3oNtEzQJxPXdK6UK21mqpx3ZYsM0yfFYrGL8mtZqM8S3mSPZCba7Ub16BKCSwwe/28fiJdhGK7Du8Pd/RtR8lprax8hCHO7YL1SeXmLK/royWkSRxwFYQ9NO0RG9swyiba5x/lRkrxvBs17eBy3jLMbeExfkf6yMeanz4ufnMlNrTYb2fpEa10G7+4oGb3jEb1hhz2c4KJTcg2E4Xg8/owAj+7Or63V5sXSN+A6YmKNfXmUTK4yxiZyyDiebKE5z9CUfTH2E44dkMDYvFzmi6xjWOx8B+IrwIxpdtYDzr9ms/3V0tkXOMX3ykrlcDqdsplSq9WgszH+k7ePJpPn9MG4sf0DlCEXbNKFTFQAAAAASUVORK5CYII=');
+}
+
+@media print {
+  body {
+      font-size: 11px;
+  }
+}
